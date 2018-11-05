@@ -1,0 +1,118 @@
+header,
+section,
+form,
+footer {
+    padding: 0 1rem;
+}
+
+body,
+header,
+#profile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.title:after {
+    content: "The Code Review";
+}
+
+header,
+section,
+footer {
+    text-align: center;
+}
+
+header {
+    background-color: #2E3A46;
+    color: white;
+}
+
+section {
+    margin: 1rem 0;
+}
+
+.weight {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+hr {
+    width: 90%;
+    color: 20px solid #2E3A46;
+}
+
+fieldset {
+    /* border-top: 2rem solid darkgray; */
+}
+
+label,
+input,
+select,
+textarea,
+button {
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+/* Profile Styling */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+button {
+    height: 3rem;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    background-color: lightgray;
+}
+
+#profile > select {
+    height: 3.5rem;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.7rem;
+    padding-right: 1rem;
+}
+
+/* Newsletter Styling */
+#newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#newsletter > input,
+#newsletter > label {
+    display: inline;
+    flex-grow: 1;
+    flex-basis: 100px;
+    justify-content: space-between;
+}
+
+button {
+    /* background-color: #2E3A46; */
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+footer {
+    margin: 1rem 0 10rem 0;
+    font-style: italic;
+}
