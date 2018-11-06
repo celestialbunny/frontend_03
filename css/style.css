@@ -56,7 +56,7 @@ input,
 select,
 textarea,
 button {
-    margin-bottom: 0.5rem;
+    margin: 1rem 0;
     width: 100%;
 }
 
@@ -68,14 +68,27 @@ input[type="tel"],
 button {
     height: 3rem;
     border-radius: 5px;
+    box-shadow: none;
 }
 
 input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="tel"],
-textarea {
-    background-color: lightgray;
+textarea,
+select {
+    background-color: #eff0f1;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #46698b;
+    border-radius: 5px;
+    padding-right: -3rem;
 }
 
 #profile > select {
@@ -91,23 +104,24 @@ input::placeholder {
 }
 
 /* Newsletter Styling */
-#newsletter {
+/* #newsletter {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
 
-#newsletter > input,
+/* #newsletter > input,
 #newsletter > label {
     display: inline;
     flex-grow: 1;
     flex-basis: 100px;
     justify-content: space-between;
-}
+} */
 
 button {
-    /* background-color: #2E3A46; */
+    background-color: #4ebbb5;
+    color: white;
     font-size: 1.2rem;
     margin: 1rem 0;
 }
@@ -115,4 +129,17 @@ button {
 footer {
     margin: 1rem 0 10rem 0;
     font-style: italic;
+}
+
+@media (min-width: 729px) {
+    body {
+        max-width: 728px;
+        margin: auto;
+    }
+
+    label, input {
+        display: inline-block;
+        width: unset;
+        margin-bottom: 0;
+    }
 }
