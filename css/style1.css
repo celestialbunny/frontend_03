@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 header,
 section,
 form,
@@ -77,8 +81,21 @@ section p {
 }
 
 hr {
-    width: 90%;
-    color: 20px solid #2E3A46;
+    border: none;
+    /* width: calc(100% - 1.5rem); */
+    width: 100%;
+    background-color: #2E3A46;
+    color: #2E3A46;
+}
+
+hr.thin {
+    height: 3px;
+    margin-top: 2px;
+}
+
+hr.thick {
+    height: 5px;
+    margin: 0;
 }
 
 /* Profile Styling */
@@ -89,8 +106,17 @@ input[type="tel"],
 button,
 select {
     height: 3rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+button,
+select,
+textarea {
     border-radius: 5px;
-    box-shadow: none;
+    border: none;
 }
 
 input[type="text"],
@@ -100,7 +126,7 @@ input[type="tel"],
 textarea,
 select {
     background-color: #eff0f1;
-    /* padding-left: 1rem; */
+    padding-left: 1rem;
 }
 
 input[type="text"]:focus,
@@ -109,8 +135,16 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #46698b;
+    outline: none;
+    border: 1px solid #2E3A46;
     border-radius: 5px;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background-color: #4ebbb5;
+    color: white;
 }
 
 input::placeholder {
