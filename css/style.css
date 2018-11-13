@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 header,
 section,
 form,
@@ -5,16 +9,17 @@ footer {
     padding: 0 1rem;
 }
 
-body,
-header,
-#profile {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
 .title:after {
     content: "The Code Review";
+}
+
+header {
+    background-color: #2E3A46;
+    color: white;
+}
+
+legend {
+    display: block;
 }
 
 header,
@@ -23,13 +28,42 @@ footer {
     text-align: center;
 }
 
-header {
-    background-color: #2E3A46;
-    color: white;
+#profile {
+    display: flex;
+    flex-direction: row;
 }
 
-section {
+.profile-view label,
+.profile-view input,
+.profile-view select {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#newsletter textarea {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    background-color: #4ebbb5;
+    color: white;
+    font-size: 1.2rem;
     margin: 1rem 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.newsletter-view {
+    display: block;
+}
+
+#newsletter > label,
+.newsletter-view {
+    margin-bottom: 1rem;
 }
 
 .weight {
@@ -42,22 +76,40 @@ h1 {
     text-transform: uppercase;
 }
 
+section p {
+    margin-bottom: 3rem;
+}
+
 hr {
-    width: 90%;
-    color: 20px solid #2E3A46;
-}
-
-fieldset {
-    /* border-top: 2rem solid darkgray; */
-}
-
-label,
-input,
-select,
-textarea,
-button {
-    margin: 1rem 0;
+    border: none;
+    /* width: calc(100% - 1.5rem); */
     width: 100%;
+    background-color: #2E3A46;
+    color: #2E3A46;
+}
+
+hr.thin {
+    height: 3px;
+    margin-top: 2px;
+}
+
+hr.thick {
+    height: 5px;
+    margin: 0;
+}
+
+.fade,
+input::placeholder,
+select {
+    color: #b3b8bb;
+}
+
+option {
+    color: #2E3A46;
+}
+
+#newsletter:not(legend) {
+
 }
 
 /* Profile Styling */
@@ -65,10 +117,20 @@ input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="tel"],
-button {
+button,
+select {
     height: 3rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+button,
+select,
+textarea {
     border-radius: 5px;
-    box-shadow: none;
+    border: none;
 }
 
 input[type="text"],
@@ -78,6 +140,7 @@ input[type="tel"],
 textarea,
 select {
     background-color: #eff0f1;
+    padding-left: 1rem;
 }
 
 input[type="text"]:focus,
@@ -86,14 +149,16 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #46698b;
+    outline: none;
+    border: 1px solid #2E3A46;
     border-radius: 5px;
-    padding-right: -3rem;
+    box-shadow: 0 0 10px #719ECE;
 }
 
-#profile > select {
-    height: 3.5rem;
-    border-radius: 5px;
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background-color: #4ebbb5;
+    color: white;
 }
 
 input::placeholder {
@@ -103,27 +168,9 @@ input::placeholder {
     padding-right: 1rem;
 }
 
-/* Newsletter Styling */
-/* #newsletter {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-} */
-
-/* #newsletter > input,
 #newsletter > label {
-    display: inline;
-    flex-grow: 1;
-    flex-basis: 100px;
-    justify-content: space-between;
-} */
-
-button {
-    background-color: #4ebbb5;
-    color: white;
-    font-size: 1.2rem;
-    margin: 1rem 0;
+    display: block;
+    margin-bottom: 1rem;
 }
 
 footer {
@@ -132,14 +179,50 @@ footer {
 }
 
 @media (min-width: 729px) {
-    body {
+    body section,
+    body form,
+    body hr {
         max-width: 728px;
         margin: auto;
     }
 
-    label, input {
-        display: inline-block;
-        width: unset;
+    body header {
+        max-width: 100%;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    #profile,
+    .profile-view {
+        display: flex;
+        align-items: center;
+    }
+
+    hr {
+        border: none;
+        height: 5px;
+        width: 100%;
+        background-color: #2E3A46;
+        color: #2E3A46;
+    }
+    
+    .profile-view label,
+    .profile-view input,
+    .profile-view select {
         margin-bottom: 0;
+    }
+    
+    .profile-view {
+        margin-bottom: 1.5rem;
+    }
+    
+    .profile-view label {
+        max-width: 200px;
+    }
+
+    #user_zip {
+        width: 33.33%;
     }
 }
