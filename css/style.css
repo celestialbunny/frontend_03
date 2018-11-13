@@ -82,10 +82,8 @@ section p {
 
 hr {
     border: none;
-    /* width: calc(100% - 1.5rem); */
     width: 100%;
     background-color: #2E3A46;
-    color: #2E3A46;
 }
 
 hr.thin {
@@ -106,10 +104,6 @@ select {
 
 option {
     color: #2E3A46;
-}
-
-#newsletter:not(legend) {
-
 }
 
 /* Profile Styling */
@@ -204,8 +198,6 @@ footer {
         border: none;
         height: 5px;
         width: 100%;
-        background-color: #2E3A46;
-        color: #2E3A46;
     }
     
     .profile-view label,
