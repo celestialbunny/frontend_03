@@ -51,10 +51,15 @@ button {
     color: white;
     font-size: 1.2rem;
     margin: 1rem 0;
+    transition-duration: 1s;
 }
 
 button:hover {
     cursor: pointer;
+    background-color: #105372;
+    border: 1px solid #2E3A46;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #719ECE;
 }
 
 .newsletter-view {
@@ -107,6 +112,13 @@ option {
 }
 
 /* Profile Styling */
+input,
+select,
+textarea {
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -149,11 +161,11 @@ select:focus {
     box-shadow: 0 0 10px #719ECE;
 }
 
-input[type="checkbox"]:checked,
+/* input[type="checkbox"]:checked,
 input[type="radio"]:checked {
     background-color: #4ebbb5;
     color: white;
-}
+} */
 
 input::placeholder {
     text-align: right;
